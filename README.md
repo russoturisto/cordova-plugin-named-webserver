@@ -1,7 +1,9 @@
-# cordova-plugin-webserver
+# cordova-plugin-named-webserver
 *A webserver plugin for cordova*
 
-This plugin helps you to start a full webserver in JavaScript on Android and iOS.
+This plugin differs from cordova-plugin-webserver only in that it allows to specify the host
+(like '0.0.0.0' or 'localhost').  It helps you to start a full webserver in JavaScript 
+on Android and iOS.
 
 ## Current supported platforms
 

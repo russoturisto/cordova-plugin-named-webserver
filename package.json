@@ -1,8 +1,8 @@
 {
-  "name": "cordova-plugin-webserver",
-  "version": "1.0.1",
-  "description": "Cordova Plugin Webserver",
-  "homepage": "https://github.com/bykof/cordova-plugin-webserver/",
+  "name": "cordova-plugin-named-webserver",
+  "version": "0.0.1",
+  "description": "Cordova Plugin named Webserver",
+  "homepage": "https://github.com/russoturisto/cordova-plugin-named-webserver/",
   "author": {
     "name": "Michael Bykovski"
   },
@@ -32,11 +32,11 @@
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "cordova": "^8.0.0"
+    "cordova": "^8.1.2"
   },
   "scripts": {
     "build": "./node_modules/babel-cli/bin/babel.js src/www/webserver.js --out-file webserver.js"
