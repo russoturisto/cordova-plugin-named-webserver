@@ -14,16 +14,15 @@ var _exec2 = _interopRequireDefault(_exec);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var WEBSERVER_CLASS = 'Webserver';
+var WEBSERVER_CLASS = 'LocalWebserver';
 var START_FUNCTION = 'start';
 var ONREQUEST_FUNCTION = 'onRequest';
 var SENDRESPONSE_FUNCION = 'sendResponse';
 var STOP_FUNCTION = 'stop';
 
-function start(success_callback, error_callback, host, port) {
+function start(success_callback, error_callback, port) {
   var params = [];
-  if (host && port) {
-    params.push(host);
+  if (port) {
     params.push(port);
   }
   (0, _exec2.default)(success_callback, error_callback, WEBSERVER_CLASS, START_FUNCTION, params);

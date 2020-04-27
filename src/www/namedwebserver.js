@@ -1,6 +1,6 @@
 import exec from 'cordova/exec';
 
-const WEBSERVER_CLASS = 'Webserver';
+const WEBSERVER_CLASS = 'NamedWebserver';
 const START_FUNCTION = 'start';
 const ONREQUEST_FUNCTION = 'onRequest';
 const SENDRESPONSE_FUNCION = 'sendResponse';

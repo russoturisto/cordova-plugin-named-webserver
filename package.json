@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-named-webserver",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Cordova Plugin named Webserver",
   "homepage": "https://github.com/russoturisto/cordova-plugin-named-webserver/",
   "author": {
@@ -39,7 +39,8 @@
     "cordova": "^8.1.2"
   },
   "scripts": {
-    "build": "./node_modules/babel-cli/bin/babel.js src/www/webserver.js --out-file webserver.js"
+    "build-named": "./node_modules/babel-cli/bin/babel.js src/www/namedwebserver.js --out-file namedwebserver.js"
+    "build-local": "./node_modules/babel-cli/bin/babel.js src/www/localwebserver.js --out-file localwebserver.js"
   },
   "browser": {
     "cordova": false

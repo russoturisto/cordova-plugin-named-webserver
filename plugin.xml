@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     id="cordova-plugin-named-webserver"
-    version="0.0.2">
+    version="0.0.4">
   <engines>
     <engine name="cordova" version=">=6.5.0" />
   </engines>
@@ -11,17 +11,26 @@
   <repo>https://github.com/russoturisto/cordova-plugin-named-webserver</repo>
   <issue>https://github.com/russoturisto/cordova-plugin-named-webserver/issues</issue>
 
-  <js-module src="webserver.js" name="webserver">
-    <clobbers target="webserver" />
+  <js-module src="localwebserver.js" name="localwebserver">
+    <clobbers target="localwebserver" />
+  </js-module>
+
+  <js-module src="namedwebserver.js" name="namedwebserver">
+    <clobbers target="namedwebserver" />
   </js-module>
 
   <platform name="android">
     <framework src="org.nanohttpd:nanohttpd:+" />
-    <source-file src="src/android/Webserver.java" target-dir="src/org/apache/cordova/plugin"/>
+    <source-file src="src/android/LocalWebserver.java" target-dir="src/org/apache/cordova/plugin"/>
+    <source-file src="src/android/NamedWebserver.java" target-dir="src/org/apache/cordova/plugin"/>
     <source-file src="src/android/NanoHTTPDWebserver.java" target-dir="src/org/apache/cordova/plugin"/>
+    <source-file src="src/android/Webserver.java" target-dir="src/org/apache/cordova/plugin"/>
     <config-file target="config.xml" parent="/*">
-      <feature name="Webserver">
-        <param name="android-package" value="org.apache.cordova.plugin.Webserver"/>
+      <feature name="LocalWebserver">
+        <param name="android-package" value="org.apache.cordova.plugin.LocalWebserver"/>
+      </feature>
+      <feature name="NamedWebserver">
+        <param name="android-package" value="org.apache.cordova.plugin.NamedWebserver"/>
       </feature>
     </config-file>
   </platform>
