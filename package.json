@@ -39,7 +39,7 @@
     "cordova": "^8.1.2"
   },
   "scripts": {
-    "build-named": "./node_modules/babel-cli/bin/babel.js src/www/namedwebserver.js --out-file namedwebserver.js"
+    "build-named": "./node_modules/babel-cli/bin/babel.js src/www/namedwebserver.js --out-file namedwebserver.js",
     "build-local": "./node_modules/babel-cli/bin/babel.js src/www/localwebserver.js --out-file localwebserver.js"
   },
   "browser": {
