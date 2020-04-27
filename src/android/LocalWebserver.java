@@ -16,6 +16,14 @@ public class LocalWebserver extends CordovaPlugin implements Webserver {
     public CallbackContext onRequestCallbackContext;
     public NanoHTTPDWebserver nanoHTTPDWebserver;
 
+    public HashMap<String, Object> getResponses() {
+        return responses;
+    }
+
+    public CallbackContext getOnRequestCallbackContext() {
+        return onRequestCallbackContext;
+    }
+
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);

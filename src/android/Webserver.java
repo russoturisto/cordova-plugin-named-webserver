@@ -19,6 +19,10 @@ import java.util.HashMap;
 
 public interface Webserver {
 
+
+    HashMap<String, Object> getResponses();
+    CallbackContext getOnRequestCallbackContext();
+
     /**
      * Called after plugin construction and fields have been initialized.
      * Prefer to use pluginInitialize instead since there is no value in
@@ -235,6 +239,6 @@ public interface Webserver {
      * Should never return null.
      * Added in cordova-android@4.0.0
      */
-    CordovaResourceApi.OpenForReadResult handleOpenForRead(Uri uri);
+    CordovaResourceApi.OpenForReadResult handleOpenForRead(Uri uri) throws IOException;
 
 }

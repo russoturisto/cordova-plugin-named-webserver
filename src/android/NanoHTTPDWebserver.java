@@ -215,9 +215,9 @@ public class NanoHTTPDWebserver extends NanoHTTPD {
             e.printStackTrace();
         }
         pluginResult.setKeepCallback(true);
-        this.webserver.onRequestCallbackContext.sendPluginResult(pluginResult);
+        this.webserver.getOnRequestCallbackContext().sendPluginResult(pluginResult);
 
-        while (!this.webserver.responses.containsKey(requestUUID)) {
+        while (!this.webserver.getResponses().containsKey(requestUUID)) {
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
@@ -225,7 +225,7 @@ public class NanoHTTPDWebserver extends NanoHTTPD {
             }
         }
 
-        JSONObject responseObject = (JSONObject) this.webserver.responses.get(requestUUID);
+        JSONObject responseObject = (JSONObject) this.webserver.getResponses().get(requestUUID);
         Response response = null;
         Log.d(this.getClass().getName(), "responseObject: " + responseObject.toString());
 
