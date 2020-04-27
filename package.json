@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-named-webserver",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cordova Plugin named Webserver",
   "homepage": "https://github.com/russoturisto/cordova-plugin-named-webserver/",
   "author": {
