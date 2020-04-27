@@ -19,11 +19,6 @@ import java.util.HashMap;
 
 public interface Webserver {
 
-    HashMap<String, Object> responses;
-    CallbackContext onRequestCallbackContext;
-    NanoHTTPDWebserver nanoHTTPDWebserver;
-
-
     /**
      * Called after plugin construction and fields have been initialized.
      * Prefer to use pluginInitialize instead since there is no value in
